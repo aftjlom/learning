@@ -97,7 +97,7 @@ public static Integer valueOf(int i) {
 }
 ```
 
-在 Java 8 中，Integer 缓存池的大小默认为 -128\~127。
+在 Java 8 中，Integer 缓存池的大小默认为 -128~127。
 
 ```java
 static final int low = -128;
