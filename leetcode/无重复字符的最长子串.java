@@ -44,11 +44,9 @@ public class 无重复字符的最长子串 {
         for (int i = 0; i < s.length(); i++) {
             char devS = s.charAt(i);
             if (map.containsKey(devS)) {
-                // 如果当前字母在之前出现过，则将最左索引移动至上一次出现该字母的索引位置-1
                 leftIndex = Math.max(leftIndex, map.get(devS) + 1);
             }
             map.put(devS, i);
-            // 更新窗口大小
             max = Math.max(max, i - leftIndex + 1);
         }
         return max;
